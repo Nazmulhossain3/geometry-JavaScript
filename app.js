@@ -9,7 +9,7 @@ function getInputFieldValue(inputId){
 
 
 function getElementInnerText(elementId){
-    const textElement = document.getElementById('triangle');
+    const textElement = document.getElementById(elementId);
     const TextElementValue = textElement.innerText
     const element = (TextElementValue)
     
@@ -92,6 +92,89 @@ document.getElementById('parallelogram-btn').addEventListener('click', function(
    tr.innerHTML = `
    <td> ${count} </td>
    <td> ${parallelogram} </td>
+   <td> ${area} <span>cm<sup> 2 </sup> </span> </td>
+   <td> <button class="btn btn-primary">Button</button> </td>
+   `;
+
+   container.appendChild(tr);
+
+
+})
+
+
+
+// rhombus addeventlistener details here
+
+
+document.getElementById('rhombus-btn').addEventListener('click', function(){
+    const rhombus = getElementInnerText('rhombus')
+    const d1 = getInputFieldValue('rhombus-base-input');
+    const d2 = getInputFieldValue('rhombus-height-input');
+    const area = 0.5 * d1 * d2;
+
+    const number = 0;
+   const count = number + 1;
+   
+   
+    const container = document.getElementById('table-container')
+   const tr = document.createElement('tr');
+   tr.innerHTML = `
+   <td> ${count} </td>
+   <td> ${rhombus} </td>
+   <td> ${area} <span>cm<sup> 2 </sup> </span> </td>
+   <td> <button class="btn btn-primary">Button</button> </td>
+   `;
+
+   container.appendChild(tr);
+
+
+})
+
+
+// pentagon btn addeventlistener details here
+
+document.getElementById('pentagon-btn').addEventListener('click', function(){
+    const pentagon = getElementInnerText('pentagon')
+    const p = getInputFieldValue('pentagon-p-input');
+    const b = getInputFieldValue('pentagon-b-input');
+    const area = 0.5 * p * b;
+
+    const number = 0;
+   const count = number + 1;
+   
+   
+    const container = document.getElementById('table-container')
+   const tr = document.createElement('tr');
+   tr.innerHTML = `
+   <td> ${count} </td>
+   <td> ${pentagon} </td>
+   <td> ${area} <span>cm<sup> 2 </sup> </span> </td>
+   <td> <button class="btn btn-primary">Button</button> </td>
+   `;
+
+   container.appendChild(tr);
+
+
+})
+
+
+//  ellipse add eventlistener work here
+
+document.getElementById('ellipse-btn').addEventListener('click', function(){
+    const ellipse = getElementInnerText('ellipse')
+    const p = getInputFieldValue('ellipse-a-input');
+    const b = getInputFieldValue('ellipse-b-input');
+    const area = 3.14 * p * b;
+
+    const number = 0;
+   const count = number + 1;
+   
+   
+    const container = document.getElementById('table-container')
+   const tr = document.createElement('tr');
+   tr.innerHTML = `
+   <td> ${count} </td>
+   <td> ${ellipse} </td>
    <td> ${area} <span>cm<sup> 2 </sup> </span> </td>
    <td> <button class="btn btn-primary">Button</button> </td>
    `;
