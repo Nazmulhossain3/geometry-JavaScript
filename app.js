@@ -51,4 +51,26 @@ document.getElementById('triangle-btn').addEventListener('click',function(){
 })
 
 
-// 
+// rectangle btn addeventlistener  start here
+
+document.getElementById('rectangle-btn').addEventListener('click',function(){
+    const rectangle = getElementInnerText('rectangle')
+    const width = getInputFieldValue('rectangle-width-input')
+    const length = getInputFieldValue('rectangle-length-input')
+    const area = width * length;
+    
+   const number = 0;
+   const count = number + 1;
+
+    
+   const container = document.getElementById('table-container')
+   const tr = document.createElement('tr');
+   tr.innerHTML = `
+   <td> ${count} </td>
+   <td> ${rectangle} </td>
+   <td> ${area} <span>cm<sup> 2 </sup> </span> </td>
+   <td> <button class="btn btn-primary">Button</button> </td>
+   `;
+
+   container.appendChild(tr);
+})
