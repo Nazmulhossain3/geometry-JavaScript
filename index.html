@@ -15,20 +15,20 @@
 
     <!-- this is Navbar part -->
     <header>
-<div class="navbar bg-base-100 p-12 bg-slate-300  mx-auto ">
-  <div class="navbar-start">
+<div class="navbar bg-base-100 p-6 bg-slate-300  mx-auto ">
+  <div class="navbar-start grid">
     <div class="dropdown">
       <label tabindex="0" class="btn btn-ghost lg:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
       </label>
      
      </div>
-     <a class="btn btn-ghost normal-case text-3xl">Interactive <br> Geometry Book </a>
+     <a class="btn btn-ghost normal-case text-xl">Geometry Book</a>
     
     </div>
  
     <div class="navbar-end">
-    <a class="btn">Blog</a>
+    <a class="btn mt-6">Blog</a>
    </div>
    </div>
 
@@ -38,9 +38,9 @@
     <!-- this is main part -->
 
     <main>
-        <section>
+        <section class="flex flex-col md:flex-row">
             <!-- this is for shape part -->
-            <div class="ractangle-side mt-12 w-[80%] gap-6 grid md:grid-cols-3 lg:grid-cols-3">
+            <div class="ractangle-side mt-12 w-[70%] gap-4 grid md:grid-cols-3 lg:grid-cols-3 ">
                
                 <div class="card card-compact w-full bg-base-100 shadow-xl ">
                     <figure><img src="./images/triangle.png" alt="Shoes" /></figure>
@@ -48,17 +48,17 @@
                       <h2 class="card-title mt-5 text-3xl mx-auto">Triangle</h2>
                       <p class="text-center text-xl font-bold">Area (A) = 0.5 *b * h</p>
 
-                      <label for="">
+                      <label class="mx-auto">
                        
-                        <input type="text" name="" id="" class="bg-slate-200 py-2 rounded-xl text-center" placeholder="b"> <span>cm</span>
+                        <input type="text" name="" id="" class="bg-slate-200 py-2 rounded-xl text-center " placeholder="b" style="width:80px"> <span>cm</span>
                       
                       
-                        <input type="text" name="" id="" class="bg-slate-200 py-2 rounded-xl text-center" placeholder="h">
+                        <input type="text" name="" id="" class="bg-slate-200 py-2 rounded-xl text-center " placeholder="h" style="width:80px">
                       </label>
                       
                       
                       <div class="card-actions justify-end">
-                        <button class="btn no-animation bg-blue-700 mt-5 mx-auto">CalCulate</button>
+                        <button class="btn no-animation bg-blue-700 mt-5 mx-auto">Calculate</button>
                       </div>
                     </div>
                  </div>
@@ -69,12 +69,12 @@
                       <h2 class="card-title mt-5 text-3xl mx-auto">Rectangle</h2>
                       <p class="text-center text-xl font-bold">Area (A) = W * l</p>
 
-                      <label for="">
+                      <label class="mx-auto">
                        
-                        <input type="text" name="" id="" class="bg-slate-200 py-2 rounded-xl text-center" placeholder="w"> <span>cm</span>
+                        <input type="text" name="" id="" class="bg-slate-200 py-2 rounded-xl text-center" placeholder="w" style="width:80px"> <span>cm</span>
                       
                       
-                        <input type="text" name="" id="" class="bg-slate-200 py-2 rounded-xl text-center" placeholder="1">
+                        <input type="text" name="" id="" class="bg-slate-200 py-2 rounded-xl text-center" placeholder="1" style="width:80px">
                       </label>
                       
                       
@@ -156,9 +156,15 @@
            
            
            
+           <!-- this is area calculation part start -->
            
-           
-            <div class="area-claculation"></div>
+            <div class="area-claculation w-[25%] mx-auto mt-12">
+                <h2 class="text-3xl text-center font-bold">Area calculation</h2>
+
+
+            </div>
+
+            <!-- this is area calculation part end here -->
 
 
 
