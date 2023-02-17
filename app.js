@@ -74,3 +74,29 @@ document.getElementById('rectangle-btn').addEventListener('click',function(){
 
    container.appendChild(tr);
 })
+
+// parallelogram-btn addeventlistener details here
+
+document.getElementById('parallelogram-btn').addEventListener('click', function(){
+    const parallelogram = getElementInnerText('parallelogram')
+    const base = getInputFieldValue('parallelogram-base-input');
+    const height = getInputFieldValue('parallelogram-height-input');
+    const area = base * height;
+
+    const number = 0;
+   const count = number + 1;
+   
+   
+    const container = document.getElementById('table-container')
+   const tr = document.createElement('tr');
+   tr.innerHTML = `
+   <td> ${count} </td>
+   <td> ${parallelogram} </td>
+   <td> ${area} <span>cm<sup> 2 </sup> </span> </td>
+   <td> <button class="btn btn-primary">Button</button> </td>
+   `;
+
+   container.appendChild(tr);
+
+
+})
