@@ -17,7 +17,6 @@ function getElementInnerText(elementId){
 }
 
 
-
 // this is for click blog btn-part
 
 document.getElementById('blog-btn').addEventListener('click',function(){
@@ -26,24 +25,34 @@ document.getElementById('blog-btn').addEventListener('click',function(){
 
 
 // here triangle addeventlistener part.....
+
+let serial = 0;
+
 document.getElementById('triangle-btn').addEventListener('click',function(){
    const triangle = getElementInnerText('triangle')
    
    const base = getInputFieldValue('base-input');
    const height =getInputFieldValue('height-input')
-   const area = 0.5 * base * height
+   const areaOfTriangle = 0.5 * base * height;
    
-   const number = 0;
-   const count = number + 1;
+   const area = areaOfTriangle.toFixed(2);
+    if(isNaN(base) || isNaN(height)){
+       return alert('please give number')
+    }
+
+    else if(base < 0 || height< 0){
+        return alert('please give positive number')
+    }
+
+    serial += 1
    
-  
    const container = document.getElementById('table-container')
    const tr = document.createElement('tr');
    tr.innerHTML = `
-   <td> ${count} </td>
+   <td> ${serial} </td>
    <td> ${triangle} </td>
    <td> ${area} <span>cm<sup> 2 </sup> </span> </td>
-   <td> <button class="btn btn-primary">Button</button> </td>
+   <td> <button class="btn btn-primary">click here</button> </td>
    `;
 
    container.appendChild(tr);
@@ -54,22 +63,32 @@ document.getElementById('triangle-btn').addEventListener('click',function(){
 // rectangle btn addeventlistener  start here
 
 document.getElementById('rectangle-btn').addEventListener('click',function(){
+    serial += 1
+
     const rectangle = getElementInnerText('rectangle')
     const width = getInputFieldValue('rectangle-width-input')
     const length = getInputFieldValue('rectangle-length-input')
-    const area = width * length;
-    
-   const number = 0;
-   const count = number + 1;
+    const rectangleOfArea = width * length;
+    const area = rectangleOfArea.toFixed(2);
 
+    if(isNaN(width) || isNaN(length)){
+        return alert('please give number')
+     }
+ 
+     else if(width < 0 || length< 0){
+         return alert('please give positive number')
+     }
+ 
+    
+  
     
    const container = document.getElementById('table-container')
    const tr = document.createElement('tr');
    tr.innerHTML = `
-   <td> ${count} </td>
+   <td> ${serial} </td>
    <td> ${rectangle} </td>
    <td> ${area} <span>cm<sup> 2 </sup> </span> </td>
-   <td> <button class="btn btn-primary">Button</button> </td>
+   <td> <button class="btn btn-primary">click here</button> </td>
    `;
 
    container.appendChild(tr);
@@ -78,22 +97,25 @@ document.getElementById('rectangle-btn').addEventListener('click',function(){
 // parallelogram-btn addeventlistener details here
 
 document.getElementById('parallelogram-btn').addEventListener('click', function(){
+
+    serial += 1
+
     const parallelogram = getElementInnerText('parallelogram')
     const base = getInputFieldValue('parallelogram-base-input');
     const height = getInputFieldValue('parallelogram-height-input');
-    const area = base * height;
+    const parallelogramOfArea = base * height;
 
-    const number = 0;
-   const count = number + 1;
+    const area = parallelogramOfArea.toFixed(2);
+
    
    
     const container = document.getElementById('table-container')
    const tr = document.createElement('tr');
    tr.innerHTML = `
-   <td> ${count} </td>
+   <td> ${serial} </td>
    <td> ${parallelogram} </td>
    <td> ${area} <span>cm<sup> 2 </sup> </span> </td>
-   <td> <button class="btn btn-primary">Button</button> </td>
+   <td> <button class="btn btn-primary">click here</button> </td>
    `;
 
    container.appendChild(tr);
@@ -106,23 +128,24 @@ document.getElementById('parallelogram-btn').addEventListener('click', function(
 // rhombus addeventlistener details here
 
 
-document.getElementById('rhombus-btn').addEventListener('click', function(){
+document.getElementById('rhombus-btn').addEventListener('click', function(){ 
+    serial += 1
     const rhombus = getElementInnerText('rhombus')
     const d1 = getInputFieldValue('rhombus-base-input');
     const d2 = getInputFieldValue('rhombus-height-input');
-    const area = 0.5 * d1 * d2;
+    const rhombusArea = 0.5 * d1 * d2;
 
-    const number = 0;
-   const count = number + 1;
-   
+    const area = rhombusArea.toFixed(2);
+
+    
    
     const container = document.getElementById('table-container')
    const tr = document.createElement('tr');
    tr.innerHTML = `
-   <td> ${count} </td>
+   <td> ${serial} </td>
    <td> ${rhombus} </td>
    <td> ${area} <span>cm<sup> 2 </sup> </span> </td>
-   <td> <button class="btn btn-primary">Button</button> </td>
+   <td> <button class="btn btn-primary">click here</button> </td>
    `;
 
    container.appendChild(tr);
@@ -134,22 +157,23 @@ document.getElementById('rhombus-btn').addEventListener('click', function(){
 // pentagon btn addeventlistener details here
 
 document.getElementById('pentagon-btn').addEventListener('click', function(){
+    serial += 1
     const pentagon = getElementInnerText('pentagon')
     const p = getInputFieldValue('pentagon-p-input');
     const b = getInputFieldValue('pentagon-b-input');
-    const area = 0.5 * p * b;
+    const areaPentagon = 0.5 * p * b;
+    const area = areaPentagon.toFixed(2);
 
-    const number = 0;
-   const count = number + 1;
+  
    
    
     const container = document.getElementById('table-container')
    const tr = document.createElement('tr');
    tr.innerHTML = `
-   <td> ${count} </td>
+   <td> ${ serial} </td>
    <td> ${pentagon} </td>
    <td> ${area} <span>cm<sup> 2 </sup> </span> </td>
-   <td> <button class="btn btn-primary">Button</button> </td>
+   <td> <button class="btn btn-primary">click here</button> </td>
    `;
 
    container.appendChild(tr);
@@ -161,22 +185,23 @@ document.getElementById('pentagon-btn').addEventListener('click', function(){
 //  ellipse add eventlistener work here
 
 document.getElementById('ellipse-btn').addEventListener('click', function(){
+    serial += 1
     const ellipse = getElementInnerText('ellipse')
     const p = getInputFieldValue('ellipse-a-input');
     const b = getInputFieldValue('ellipse-b-input');
-    const area = 3.14 * p * b;
+    const areaEllipse = 3.14 * p * b;
+    const area = areaEllipse.toFixed(2);
 
-    const number = 0;
-   const count = number + 1;
+   
    
    
     const container = document.getElementById('table-container')
    const tr = document.createElement('tr');
    tr.innerHTML = `
-   <td> ${count} </td>
+   <td> ${serial} </td>
    <td> ${ellipse} </td>
    <td> ${area} <span>cm<sup> 2 </sup> </span> </td>
-   <td> <button class="btn btn-primary">Button</button> </td>
+   <td> <button class="btn btn-primary">click here</button> </td>
    `;
 
    container.appendChild(tr);
